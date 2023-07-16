@@ -17,7 +17,9 @@ export default function App() {
     setText(lowerCase)
   }
   function CapitalizeCaseForm(){
-    
+    let CapitalCase = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
+    console.log(CapitalCase)
+    setText(CapitalCase)
   }
   return (
     <main>
@@ -28,6 +30,12 @@ export default function App() {
         <button className="mt-2 mx-3 btn btn-primary" onClick={UpperCaseForm}> Convert To Upper Case</button>
         <button className="mt-2 mx-3 btn btn-primary" onClick={LowerCaseForm}> Convert To Lower Case</button>
         <button className="mt-2 mx-3 btn btn-primary" onClick={CapitalizeCaseForm}> Convert To Capitalize Case</button>
+      </div>
+      <div>
+        <h1>
+        Your Text Summery
+        </h1>
+        <p>{text.split(" ").length} words and {text.length} characters</p>
       </div>
     </main>
   )
